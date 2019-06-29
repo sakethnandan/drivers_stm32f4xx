@@ -93,15 +93,45 @@ typedef struct{
 }GPIO_RegDef_t;
 
 typedef struct{
-	__vo uint32_t RCC_CR; 		/* GPIO port mode register,	Address offset 0x00 */
-	__vo uint32_t RCC_PLLCGFR;		/* GPIO port output type register,	Address offset 0x04 */
-	__vo uint32_t RCC_CFGR;		/* GPIO port output speed register,	Address offset 0x08 */
-	__vo uint32_t RCC_CIR;			/* GPIO port pull-up/pull-down register,	Address offset 0x0C */
-	__vo uint32_t RCC_AHB1RSTR;			/* GPIO port input data register,	Address offset 0x10 */
-	__vo uint32_t RCC_AHB2RSTR;			/* GPIO port output data register,	Address offset 0x14 */
-	__vo uint32_t RCC_AHB3RSTR;			/* GPIO port bit set/reset register,	Address offset 0x18 */
-	__vo uint32_t RCC_APB1RSTR;			/* GPIO port configuration lock register,	Address offset 0x1C */
-	__vo uint32_t AFR[2];		/* AF[0]: GPIO alternate function low register, AF[1]: GPIO alternate function high registerAddress offset 0x20 */
+	__vo uint32_t RCC_CR;
+	__vo uint32_t RCC_PLLCGFR;
+	__vo uint32_t RCC_CFGR;
+	__vo uint32_t RCC_CIR;
+	__vo uint32_t RCC_AHB1RSTR;
+	__vo uint32_t RCC_AHB2RSTR;
+	__vo uint32_t RCC_AHB3RSTR;
+		 uint32_t RESERVED0;
+	__vo uint32_t RCC_APB1RSTR;
+	__vo uint32_t RCC_APB2RSTR;
+		 uint32_t RESERVED1[2];
+	__vo uint32_t RCC_AHB1ENR;
+	__vo uint32_t RCC_AHB2ENR;
+	__vo uint32_t RCC_AHB3ENR;
+		 uint32_t RESERVED2;
+	__vo uint32_t RCC_APB1ENR;
+	uint32_t RESERVED3;
+	__vo uint32_t RCC_APB2ENR;
+	uint32_t RESERVED4;
+	uint32_t RESERVED5;
+	__vo uint32_t RCC_AHB1LPENR;
+	__vo uint32_t RCC_AHB2LPENR;
+	__vo uint32_t RCC_AHB3LPENR;
+	uint32_t RESERVED6;
+	__vo uint32_t RCC_APB1LPENR;
+	__vo uint32_t RCC_APB2LPENR;
+	uint32_t RESERVED7;
+	uint32_t RESERVED8;
+	__vo uint32_t RCC_BDCR;
+	__vo uint32_t RCC_CSR;
+	uint32_t RESERVED9;
+	uint32_t RESERVED10;
+	__vo uint32_t RCC_SSCGR;
+	__vo uint32_t RCC_PLLI2SCFGR;
+	__vo uint32_t RCC_PLLSAICFGR;
+	__vo uint32_t RCC_DCKCFGR;
+	__vo uint32_t RCC_CKGATENR;
+	__vo uint32_t RCC_DCKCFGR2;
+
 }RCC_RegDef_t;
 
 /*
